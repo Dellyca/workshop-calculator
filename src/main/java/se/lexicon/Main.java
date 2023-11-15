@@ -8,11 +8,11 @@ public class Main {
 
         System.out.println("Calculator application!");
         double result = 0;
-        char exit = 'y';
+        char canContinue = 'y';
 
-        while (exit == 'y') {
+        Scanner scannerObject = new Scanner(System.in);
 
-            Scanner scannerObject = new Scanner(System.in);
+        while (canContinue == 'y') {
 
             //Operation
             System.out.println("Enter the operation of your choise 1 Add, 2 Subtract, 3 Multiply, 4 Divide");
@@ -50,12 +50,9 @@ public class Main {
 
             }
 
-            System.out.println("result");
+            System.out.println("Do you want to continue? y/n");
+            canContinue = scannerObject.next().charAt(0);
 
-
-
-        System.out.println("Do you want to proceed? y/n");
-        exit = scannerObject.next().charAt(0);
         }
     }
 }
